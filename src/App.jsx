@@ -1,10 +1,14 @@
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {FlatList, SafeAreaView, Text} from 'react-native';
+import music_data from './Data/music-data.json';
 
 const App = () => {
   return (
     <SafeAreaView>
-      <Text></Text>
+      <FlatList
+        data={music_data}
+        renderItem={({item}) => <Text>{item.artist}</Text>}
+      />
     </SafeAreaView>
   );
 };
